@@ -1,0 +1,40 @@
+// Color Variables
+$violet-color:  hsl(256, 26%, 20%);
+$dark-violet: hsl(270, 9%, 17%);
+$light-gray: hsl(0, 0%, 98%);
+$gray-blue: hsl(216, 30%, 68%);
+$gray-violet: hsl(273, 4%, 51%);
+
+// Transition Variable
+$transition-hover: all 0.4s ease-in-out;
+
+// Utilities classes
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+// Buttons classes
+.btn-dark {
+  border: 2px solid $dark-violet;
+  color: $dark-violet;
+
+  &:hover {
+    background: $dark-violet;
+    color: $light-gray;
+  }
+}
+
+.btn-light {
+  color: $light-gray;
+  border: 2px solid $light-gray;
+
+  &:hover {
+    background-color: $light-gray;
+    color: $dark-violet;
+  }
+}
+
+
+

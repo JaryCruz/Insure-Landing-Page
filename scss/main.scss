@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+
+@import "utilities";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+}
+
+h1 {
+  color: $light-gray;
+  font-family: 'DM Serif Display', sans-serif;
+  font-size: 67px;
+  line-height: 1;
+  width: 90%;
+  margin-bottom: 25px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  background: transparent;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: $transition-hover;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Karla', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  transition: $transition-hover;
+}
+
+// Navbar
+nav {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 40px auto;
+
+      img {
+        height: 100%;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+  
+        a {
+          color: $gray-violet;
+
+          &:hover {
+            color: $dark-violet;
+          }
+        }
+      }
+
+      .hamburger {
+        display: none;
+      }
+    }
+}
+
+// Header
+header {
+  background-color: $dark-violet;
+  height: 550px;
+  padding: 90px 0;
+
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+
+    .people-img {
+      width: 90%;
+      height: 550px;
+      background: url('/dist/images/image-intro-desktop.jpg') no-repeat center center/cover;
+    }
+
+    .header-cta {
+      hr {
+        width: 20%;
+        margin-bottom: 40px;
+      }
+
+      p {
+        color: $light-gray;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+
+    }
+  }
+
+
+}
