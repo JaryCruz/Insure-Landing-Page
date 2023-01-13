@@ -30,8 +30,8 @@ h2 {
 
 h3 {
   color: $light-gray;
-  width: 70%;
   font-size: 40px;
+  margin-right: 20px;
   font-weight: 400;
   font-family: 'DM Serif Display', sans-serif;
   line-height: 1;
@@ -83,7 +83,7 @@ nav {
         height: 100%;
       }
 
-      ul {
+      .main-menu {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -99,9 +99,41 @@ nav {
       }
 
       .hamburger {
+        padding: 5px;
+        width: 40px;
+        height: 35px;
+        position: relative;
+        cursor: pointer;
+        background: none;
         display: none;
+
+        .top-line,
+        .middle-line,
+        .bottom-line {
+          position: absolute;
+          top: 20%;
+          left: 15%;
+          width: 24px;
+          height: 2px;
+          background: $dark-violet;
+          transform: rotate(0);
+          transition: all 0.5s;
+        }
+
+        .middle-line {
+          translate: 0 8px;
+        }
+
+        .top-line {
+          translate: 0 16px;
+        }
       }
     }
+}
+
+// Mobile Menu
+.mobile-menu {
+  display: none;
 }
 
 // Header
@@ -138,7 +170,7 @@ header {
 
 // Benefits Section
 main {
-  padding: 230px 0 150px 0;
+  padding: 230px 0 50px 0;
 
   hr {
     margin-bottom: 40px;
@@ -169,6 +201,60 @@ main {
 
     button {
       width: 250px;
+    }
+  }
+}
+
+// Footer
+footer {
+  background-color: $light-gray;
+  padding: 50px 0;
+
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $gray-violet;
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  .footer-categories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+
+    li {
+      margin-bottom: 15px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    .category-heading {
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// Tablets & Big Smartphones
+@media (max-width: 768px) {
+  nav {
+    .container {
+      .main-menu {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
     }
   }
 }
